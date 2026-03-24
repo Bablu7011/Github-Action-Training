@@ -1,11 +1,18 @@
-name: Task1 workflows
+name: Task4 PR Workflow
 
 on:
   pull_request:
-  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Workflow triggered!"
+      - name: Build
+        run: echo "Build successful"
+
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test
+        run: echo "Test successful"
