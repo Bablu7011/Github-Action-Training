@@ -1,4 +1,4 @@
-name: Task3 workflows
+name: Task3 workflow
 
 on:
   push:
