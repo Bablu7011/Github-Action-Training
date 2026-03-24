@@ -1,4 +1,4 @@
-name: Task5 Docker
+name: Task5 workflows for docker
 
 on:
   push:
