@@ -1,12 +1,20 @@
+<<<<<<< HEAD
 name: Task4 PR Workflow
 
 on:
   pull_request:
+=======
+name: Task3 workflow
+
+on:
+  push:
+>>>>>>> 5ef5212b80b69fb097356a1eeb7df1d1f0a96686
 
 jobs:
-  build:
+  info:
     runs-on: ubuntu-latest
     steps:
+<<<<<<< HEAD
       - name: Build
         run: echo "Build successful"
 
@@ -16,3 +24,9 @@ jobs:
     steps:
       - name: Test
         run: echo "Test successful"
+=======
+      - name: Show details
+        run: |
+          echo "Branch: ${{ github.ref }}"
+          echo "Commit: ${{ github.sha }}"
+>>>>>>> 5ef5212b80b69fb097356a1eeb7df1d1f0a96686
