@@ -1,11 +1,18 @@
-name: Task1 workflows
+name: Task2 workflows
 
 on:
-  pull_request:
-  workflow_dispatch:
+  push:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Workflow triggered!"
+      - name: Build step
+        run: echo "Building application"
+
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test step
+        run: echo "Testing application"
