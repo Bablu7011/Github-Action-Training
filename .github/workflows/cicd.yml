@@ -1,18 +1,13 @@
-name: Task2 workflows
+name: Task3 workflows
 
 on:
   push:
 
 jobs:
-  build:
+  info:
     runs-on: ubuntu-latest
     steps:
-      - name: Build step
-        run: echo "Building application"
-
-  test:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Test step
-        run: echo "Testing application"
+      - name: Show details
+        run: |
+          echo "Branch: ${{ github.ref }}"
+          echo "Commit: ${{ github.sha }}"
